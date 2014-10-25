@@ -13,6 +13,7 @@
 		B304258D19F613D500F447AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B304258C19F613D500F447AD /* Images.xcassets */; };
 		B304259019F613D500F447AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B304258E19F613D500F447AD /* LaunchScreen.xib */; };
 		B304259C19F613D500F447AD /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B304259B19F613D500F447AD /* AlcolatorTests.m */; };
+		B3466CC919FC48B7002A83F5 /* BLCMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3466CC819FC48B7002A83F5 /* BLCMainMenuViewController.m */; };
 		B3D3788619F9C52300289677 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D3788519F9C52300289677 /* BLCWhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +40,10 @@
 		B304259519F613D500F447AD /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B304259A19F613D500F447AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B304259B19F613D500F447AD /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
-		B3D3788419F9C52300289677 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCWhiskeyViewController.h; path = Alcolator/BLCWhiskeyViewController.h; sourceTree = "<group>"; };
-		B3D3788519F9C52300289677 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCWhiskeyViewController.m; path = Alcolator/BLCWhiskeyViewController.m; sourceTree = "<group>"; };
+		B3466CC719FC48B7002A83F5 /* BLCMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCMainMenuViewController.h; sourceTree = "<group>"; };
+		B3466CC819FC48B7002A83F5 /* BLCMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMainMenuViewController.m; sourceTree = "<group>"; };
+		B3D3788419F9C52300289677 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
+		B3D3788519F9C52300289677 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +67,6 @@
 		B304257319F613D500F447AD = {
 			isa = PBXGroup;
 			children = (
-				B3D3788419F9C52300289677 /* BLCWhiskeyViewController.h */,
-				B3D3788519F9C52300289677 /* BLCWhiskeyViewController.m */,
 				B304257E19F613D500F447AD /* Alcolator */,
 				B304259819F613D500F447AD /* AlcolatorTests */,
 				B304257D19F613D500F447AD /* Products */,
@@ -84,6 +85,10 @@
 		B304257E19F613D500F447AD /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
+				B3466CC719FC48B7002A83F5 /* BLCMainMenuViewController.h */,
+				B3466CC819FC48B7002A83F5 /* BLCMainMenuViewController.m */,
+				B3D3788419F9C52300289677 /* BLCWhiskeyViewController.h */,
+				B3D3788519F9C52300289677 /* BLCWhiskeyViewController.m */,
 				B304258319F613D500F447AD /* BLCAppDelegate.h */,
 				B304258419F613D500F447AD /* BLCAppDelegate.m */,
 				B304258619F613D500F447AD /* BLCViewController.h */,
@@ -221,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B304258819F613D500F447AD /* BLCViewController.m in Sources */,
+				B3466CC919FC48B7002A83F5 /* BLCMainMenuViewController.m in Sources */,
 				B3D3788619F9C52300289677 /* BLCWhiskeyViewController.m in Sources */,
 				B304258519F613D500F447AD /* BLCAppDelegate.m in Sources */,
 				B304258219F613D500F447AD /* main.m in Sources */,

@@ -21,7 +21,7 @@
     [super loadView];
     self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 20, self.view.bounds.size.width - 40, 44)];
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 80, self.view.bounds.size.width - 40, 44)];
     textField.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
     
     UISlider *slider = [[UISlider alloc] init];
@@ -44,7 +44,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.title = NSLocalizedString(@"Wine", @"wine");
     self.view.backgroundColor = [UIColor colorWithRed:0 green:.349 blue:.498 alpha:1.0];
     
     self.beerPercentTextField.backgroundColor = [UIColor lightGrayColor];
@@ -113,19 +113,29 @@
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
     
-/*    int beersLabel = self.beerCountSlider.value;
+    int numberOfBeers = self.beerCountSlider.value;
+    int ouncesInOneBeerGlass = 12;
     
-    NSString *beersText;
+    float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
+    float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
     
-    if (beersLabel == 1) {
-        beersText = NSLocalizedString(@"beer", @"singular beer");
+    float ouncesInOneWineGlass = 5;
+    float alcoholPercentageOfWine = 0.13;
+    
+    float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
+    float numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    
+    NSString *wineText;
+    
+    if (numberOfWineGlassesForEquivalentAlcoholAmount <= 1) {
+        wineText = NSLocalizedString(@"glass", @"singular glass");
     } else {
-        beersText = NSLocalizedString(@"beers", @"plural of beer");
+        wineText = NSLocalizedString(@"glasses", @"plural of glass");
     }
     
-    NSString *sliderText = [NSString stringWithFormat:@"%d %@", beersLabel, beersText];
-    self.sliderLabel.text = sliderText;
- */
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"Wine (%.lf %@)", nil), numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+    self.title = resultText;
 }
 
 - (void)buttonPressed:(UIButton *)sender {
@@ -154,7 +164,7 @@
     
     NSString *wineText;
     
-    if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+    if (numberOfWineGlassesForEquivalentAlcoholAmount <= 1) {
         wineText = NSLocalizedString(@"glass", @"singular glass");
     } else {
         wineText = NSLocalizedString(@"glasses", @"plural of glass");
