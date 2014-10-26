@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BLCMainMenuViewController.h"
 
-@interface BLCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface BLCAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
